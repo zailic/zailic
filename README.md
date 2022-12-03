@@ -1,29 +1,19 @@
-<table>
-    <tr style="vertical-align: top">
-        <td style="width: 50%">
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/header.svg" />
-            </a>
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/act_comm.svg" />
-            </a>
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/isocalendar.svg" />
-            </a>
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/achievements.svg" />
-            </a>
-        </td>
-        <td style="width: 50%">
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/followup_lang.svg" />
-            </a>
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/habits.svg" />
-            </a>
-            <a href="https://github.com/zailic">
-                <img src="assets/metrics/repositories.svg" />
-            </a>
-        </td>
-    </tr>
-</table>
+<a align="center" href="https://github.com/zailic">
+    <img width="45%" src="assets/metrics/header.svg" />
+    <br/>
+</a>
+<a align="center" href="https://github.com/zailic">
+    <img width="45%" src="assets/metrics/act_comm.svg" />
+    <img width="45%" src="assets/metrics/followup_lang.svg" />
+</a>
+
+<a align="center" href="https://github.com/zailic">
+    <img width="45%" src="assets/metrics/isocalendar.svg" />
+    <img width="45%" src="assets/metrics/habits.svg" />
+</a>
+
+
+<a align="center" href="https://github.com/zailic">
+   <img width="45%" src="assets/metrics/achievements.svg" />
+    <img width="45%" src="assets/metrics/repositories.svg" />
+</a>
