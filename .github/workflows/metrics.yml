@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
   push: {branches: ["master", "main"]}
 jobs:
-  header:
+  metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
+        name: header
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           # Options
@@ -17,13 +18,8 @@ jobs:
           filename: assets/metrics/header.svg
           base: header
           config_timezone:  ${{ secrets.USER_TIMEZONE }}
-  
-  achievements:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
       - uses: lowlighter/metrics@latest
+        name: achievements
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           # Options
@@ -35,13 +31,8 @@ jobs:
           plugin_achievements_display: compact
           plugin_achievements_secrets: yes
           plugin_achievements_threshold: C
-
-  isocalendar:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
       - uses: lowlighter/metrics@latest
+        name: isocalendar
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
@@ -52,11 +43,8 @@ jobs:
           config_timezone: ${{ secrets.USER_TIMEZONE }}
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-
-  repositories:
-    runs-on: ubuntu-latest
-    steps:
       - uses: lowlighter/metrics@latest
+        name: repositories
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
@@ -66,11 +54,8 @@ jobs:
           filename: assets/metrics/repositories.svg
           base: repositories
           config_timezone: ${{ secrets.USER_TIMEZONE }}
-
-  actitivity_community:
-    runs-on: ubuntu-latest
-    steps:
       - uses: lowlighter/metrics@latest
+        name: "activity & community"
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
@@ -80,11 +65,8 @@ jobs:
           filename: assets/metrics/act_comm.svg
           base: activity, community
           config_timezone: ${{ secrets.USER_TIMEZONE }}
-
-  habits:
-    runs-on: ubuntu-latest
-    steps:
       - uses: lowlighter/metrics@latest
+        name: "habits"
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
@@ -99,11 +81,8 @@ jobs:
           plugin_habits_charts: yes     
           plugin_habits_trim: yes       
           config_timezone: ${{ secrets.USER_TIMEZONE }}
-
-  followup_lang:
-    runs-on: ubuntu-latest
-    steps:
       - uses: lowlighter/metrics@latest
+        name: languages
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
