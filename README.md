@@ -4,20 +4,17 @@
             <a href="https://github.com/zailic">
                 <img src="assets/metrics/header.svg" />
             </a>
-        </td>
-        <td>
             <a href="https://github.com/zailic">
-                <img src="assets/metrics/achievements.svg" />
+                <img src="assets/metrics/repositories.svg" />
             </a>
-        </td>
-    </tr>
-    <tr style="vertical-align: top" P>
-        <td>
             <a href="https://github.com/zailic">
                 <img src="assets/metrics/isocalendar.svg" />
             </a>
         </td>
-        <td>
+        <td style="width: 50%">
+            <a href="https://github.com/zailic">
+                <img src="assets/metrics/achievements.svg" />
+            </a>
         </td>
     </tr>
 </table>

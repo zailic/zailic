@@ -44,6 +44,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          commiter_token: ${{ secrets.GITHUB_TOKEN }}
           # Options
           template: classic
           filename: assets/metrics/isocalendar.svg
@@ -64,4 +65,51 @@ jobs:
           template: classic
           filename: assets/metrics/repositories.svg
           base: repositories
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
+
+  actitivity_community:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          commiter_token: ${{ secrets.GITHUB_TOKEN }}
+          # Options
+          user: zailic
+          template: classic
+          filename: assets/metrics/act_comm.svg
+          base: activity, community
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
+
+  habits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          commiter_token: ${{ secrets.GITHUB_TOKEN }}
+          # Options
+          user: zailic
+          template: classic
+          filename: assets/metrics/habits.svg
+          base: ""
+          plugin_habits: yes
+          plugin_habits_from: 200       
+          plugin_habits_days: 60        
+          plugin_habits_charts: yes     
+          plugin_habits_trim: yes       
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
+
+  lines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          commiter_token: ${{ secrets.GITHUB_TOKEN }}
+          # Options
+          user: zailic
+          template: classic
+          filename: assets/metrics/lines.svg
+          base: "repositories"
           config_timezone: ${{ secrets.USER_TIMEZONE }}
