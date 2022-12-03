@@ -1,1 +1,3 @@
-<img align="left" width="100" height="100" src="./github-metrics.svg">
+<a href="https://github.com/zailic">
+  <img align="center" width="100%" src="./github-metrics.svg" />
+</a>
