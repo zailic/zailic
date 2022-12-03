@@ -51,3 +51,18 @@ jobs:
           config_timezone: ${{ secrets.USER_TIMEZONE }}
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
+
+  repositories:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_SECRET }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: zailic
+          template: classic
+          filename: assets/metrics/repositories.svg
+          base: repositories
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
